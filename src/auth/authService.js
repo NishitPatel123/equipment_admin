@@ -1,0 +1,17 @@
+import axios from "axios"
+const BASE = "https://equipment-user-n5bb.onrender.com"
+export const getToken = () => localStorage.getItem("re_admin_token")
+export const setToken = (t) => localStorage.setItem("re_admin_token", t)
+export const removeToken = () => localStorage.removeItem("re_admin_token")
+export const getHeaders = () => ({ Authorization: `Bearer ${getToken()}` })
+const checkSession = async () => {
+  const token = getToken()
+  if (!token) return { isAuth: false, session: null }
+  try {
+    const res = await axios.get(`${BASE}/session`, { headers: getHeaders() })
+    const ud = res.data.userData
+    if (ud?.session?.role === "Admin") return { isAuth: true, session: ud.session }
+    removeToken(); return { isAuth: false, session: null }
+  } catch { removeToken(); return { isAuth: false, session: null } }
+}
+export default checkSession

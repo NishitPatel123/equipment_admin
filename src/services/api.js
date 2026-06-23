@@ -1,0 +1,22 @@
+import axios from "axios"
+import { getHeaders } from "../auth/authService"
+const BASE = "https://equipment-user-n5bb.onrender.com"
+export const login = (d) => axios.post(`${BASE}/login`, d)
+export const changePassword = (d) => axios.post(`${BASE}/changePassword`, d)
+export const getProfile = () => axios.get(`${BASE}/user/profile`, { headers: getHeaders() })
+export const updateProfile = (d) => axios.post(`${BASE}/user/updateProfile`, d, { headers: getHeaders() })
+export const getDashboardStats = () => axios.get(`${BASE}/admin/dashboardStats`, { headers: getHeaders() })
+export const getAdminUsers = () => axios.get(`${BASE}/admin/users`, { headers: getHeaders() })
+export const updateUserStatus = (d) => axios.post(`${BASE}/admin/updateUserStatus`, d, { headers: getHeaders() })
+export const getAdminCategories = () => axios.get(`${BASE}/admin/categories`, { headers: getHeaders() })
+export const addCategory = (d) => axios.post(`${BASE}/admin/addCategory`, d, { headers: getHeaders() })
+export const updateCategory = (d) => axios.post(`${BASE}/admin/updateCategory`, d, { headers: getHeaders() })
+export const deleteCategory = (id) => axios.get(`${BASE}/admin/deleteCategory/${id}`, { headers: getHeaders() })
+export const getAdminEquipment = () => axios.get(`${BASE}/admin/equipment`, { headers: getHeaders() })
+export const addEquipment = (d) => axios.post(`${BASE}/admin/addEquipment`, d, { headers: getHeaders() })
+export const updateEquipment = (d) => axios.post(`${BASE}/admin/updateEquipment`, d, { headers: getHeaders() })
+export const deleteEquipment = (id) => axios.get(`${BASE}/admin/deleteEquipment/${id}`, { headers: getHeaders() })
+export const getAdminBookings = () => axios.get(`${BASE}/admin/bookings`, { headers: getHeaders() })
+export const updateBooking = (d) => axios.post(`${BASE}/admin/updateBooking`, d, { headers: getHeaders() })
+export const getAdminPayments = () => axios.get(`${BASE}/admin/payments`, { headers: getHeaders() })
+export const getAdminFeedbacks = () => axios.get(`${BASE}/admin/feedbacks`, { headers: getHeaders() })

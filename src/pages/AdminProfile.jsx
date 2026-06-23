@@ -3,7 +3,7 @@ import { toast } from "react-toastify"
 import AdminLayout from "../common/AdminLayout"
 import { getProfile, updateProfile, changePassword } from "../services/api"
 
-const BACKEND = "https://equipment-user-n5bb.onrender.com"
+const BACKEND = "https://equipment-admin-6p93.onrender.com"
 
 export default function AdminProfile({ setIsAuthenticated, adminName }) {
   const [profile, setProfile] = useState(null)

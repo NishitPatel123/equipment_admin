@@ -3,7 +3,7 @@ import { toast } from "react-toastify"
 import AdminLayout from "../common/AdminLayout"
 import DataTable from "../common/DataTable"
 import { getAdminUsers, updateUserStatus } from "../services/api"
-const BACKEND = "https://equipment-user-n5bb.onrender.com"
+const BACKEND = "https://equipment-admin-6p93.onrender.com"
 export default function ManageUsers({ setIsAuthenticated, adminName }) {
   const [users, setUsers] = useState([]); const [loading, setLoading] = useState(true); const [toggling, setToggling] = useState(null)
   const fetch = async () => { setLoading(true); try { const r = await getAdminUsers(); setUsers(r.data.data || []) } catch { toast.error("Failed") } finally { setLoading(false) } }

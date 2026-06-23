@@ -1,6 +1,6 @@
 import axios from "axios"
 import { getHeaders } from "../auth/authService"
-const BASE = "https://equipment-user-n5bb.onrender.com"
+const BASE = "https://equipment-admin-6p93.onrender.com"
 export const login = (d) => axios.post(`${BASE}/login`, d)
 export const changePassword = (d) => axios.post(`${BASE}/changePassword`, d)
 export const getProfile = () => axios.get(`${BASE}/user/profile`, { headers: getHeaders() })

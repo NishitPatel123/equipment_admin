@@ -1,5 +1,5 @@
 import axios from "axios"
-const BASE = "https://equipment-user-n5bb.onrender.com"
+const BASE = "https://equipment-admin-6p93.onrender.com"
 export const getToken = () => localStorage.getItem("re_admin_token")
 export const setToken = (t) => localStorage.setItem("re_admin_token", t)
 export const removeToken = () => localStorage.removeItem("re_admin_token")

@@ -4,7 +4,7 @@ import AdminLayout from "../common/AdminLayout"
 import DataTable from "../common/DataTable"
 import { getAdminEquipment, getAdminCategories, addEquipment, updateEquipment, deleteEquipment } from "../services/api"
 
-const BACKEND = "https://equipment-user-n5bb.onrender.com"
+const BACKEND = "https://equipment-admin-6p93.onrender.com"
 const empty = { category_id: "", name: "", description: "", specification: "", price: "", total_qty: "", status: "Available" }
 
 export default function ManageEquipment({ setIsAuthenticated, adminName }) {

@@ -4,7 +4,7 @@ import AdminLayout from "../common/AdminLayout"
 import DataTable from "../common/DataTable"
 import { getAdminCategories, addCategory, updateCategory, deleteCategory } from "../services/api"
 
-const BACKEND = "https://equipment-user-n5bb.onrender.com"
+const BACKEND = "https://equipment-admin-6p93.onrender.com"
 
 export default function ManageCategories({ setIsAuthenticated, adminName }) {
   const [cats, setCats] = useState([]); const [loading, setLoading] = useState(true); const [modal, setModal] = useState(false); const [editing, setEditing] = useState(null); const [form, setForm] = useState({ name: "", status: "Active" }); const [imgFile, setImgFile] = useState(null); const [preview, setPreview] = useState(null); const [saving, setSaving] = useState(false)
